@@ -32,6 +32,8 @@ git 자주쓰는 명령어 모음
 
 `git remote -v` : 원격 저장소 url 보기
 
+`git remote add [URL]` : 원격 url 추가
+
 ## git clean
 
 `git clean` : 추적되고 있지 않은 모든 파일을 삭제함
