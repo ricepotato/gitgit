@@ -44,12 +44,14 @@ git 자주쓰는 명령어 모음
 ## git revert
 
 
-`git revert [commit]` : 대상 commit 전 상태로 코드를 되돌리고 새로운 commit 을 생성함
+`git revert [commit]` : 대상 commit 상태로 코드를 되돌리고 새로운 commit 을 생성함
 
 
 ## git reset
 
-`git reset [commit]` : 대상 commit 상태로 코드를 되돌림
+`git reset (--mixed) [commit]` : 대상 commit 상태로 코드를 되돌림 (코드 변경사항이 not staged 상태가 됨)
 
-`git reset --hard [commit]` : 대상 commit 상태로 코드를 되돌리고 commit 을 삭제함
+`git reset --soft [commit]` : 대상 commit 상태로 코드를 되돌림 (코드 변경사항이 staged 상태가 됨)
+
+`git reset --hard [commit]` : 대상 commit 상태로 코드를 되돌리고 commit 을 삭제함 (코드 변경사항이 삭제됨)
 
