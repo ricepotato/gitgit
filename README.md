@@ -56,6 +56,11 @@
 `git reset --hard [commit]` : 대상 commit 상태로 코드를 되돌리고 commit 을 삭제함 (코드 변경사항이 삭제됨)
 
 
+### git config
+
+`git config --global commit.template ~/.gittemplate` : git template 지정
+
+
 ## commit type
 
 feat: 새로운 기능 추가
