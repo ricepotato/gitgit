@@ -1,0 +1,84 @@
+{
+  "generage decorator snippets": {
+    "prefix": "python-decorator",
+    "body": [
+      "import functools",
+      "",
+      "def some_deco(func):",
+      "    @functools.wraps(func)",
+      "    def wrapper(*args, **kwargs):",
+      "        return func(*args, **kwargs)",
+      "    return wrapper"
+    ],
+    "description": "Generate default unitttest code."
+  },
+  "coding utf8": {
+    "prefix": "python-coding",
+    "body": ["#-*- coding: utf-8 -*-"],
+    "description": "Generate default unitttest code."
+  },
+  "py-logging": {
+    "prefix": "python-logging",
+    "body": [
+      "import logging",
+      "",
+      "log = logging.getLogger(f\"app.{__name__}\")"
+    ],
+    "description": "Generate default logging."
+  },
+  "generate unittest snippets": {
+    "prefix": "python-unittest",
+    "body": [
+      "#-*- coding: utf-8 -*-",
+      "",
+      "import unittest",
+      "from unittest.mock import Mock, call",
+      "",
+      "class SomeTestCase(unittest.TestCase):",
+      "    def tearDown(self):",
+      "        pass",
+      "",
+      "    def setUp(self):",
+      "        pass",
+      "",
+      "    def test(self):",
+      "        pass",
+      "",
+      "if __name__ == \"__main__\":",
+      "    unittest.main()"
+    ],
+    "description": "Generate default unitttest code."
+  },
+  "strftime": {
+    "prefix": "strftime",
+    "body": ["dt.strftime(\"%Y-%m-%d %H:%M:%S\")"],
+    "description": "Generate default unitttest code."
+  },
+  "makerandomfile": {
+    "prefix": "makerandomfile",
+    "body": [
+      "import os",
+      "import tempfile",
+      "",
+      "",
+      "def make_random_file(size=1024, prefix=\"tmp-random-\"):",
+      "    with tempfile.NamedTemporaryFile(prefix=prefix, delete=False) as f:",
+      "        f.write(os.urandom(size))",
+      "        return f.name"
+    ],
+    "description": "make random file function"
+  },
+  "makerandomstring": {
+    "prefix": "makerandomstring",
+    "body": [
+      "import string",
+      "import random",
+      "",
+      "",
+      "def make_random_string(length):",
+      "    letters = string.ascii_lowercase",
+      "    return \"\".join(random.choice(letters) for _ in range(length))"
+    ],
+    "description": "make random string"
+  }
+}
