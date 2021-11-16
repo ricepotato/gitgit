@@ -1,6 +1,6 @@
 {
   "generage decorator snippets": {
-    "prefix": "python-decorator",
+    "prefix": "decorator-common",
     "body": [
       "import functools",
       "",
@@ -18,7 +18,7 @@
     "description": "Generate default unitttest code."
   },
   "py-logging": {
-    "prefix": "python-logging",
+    "prefix": "common-logging",
     "body": [
       "import logging",
       "",
@@ -80,5 +80,72 @@
       "    return \"\".join(random.choice(letters) for _ in range(length))"
     ],
     "description": "make random string"
+  },
+  "moddocstring": {
+    "prefix": "moddocstring",
+    "body": [
+      "\"\"\"A one line summary of the module or program, terminated by a period.",
+      "",
+      "Leave one blank line.  The rest of this docstring should contain an",
+      "overall description of the module or program.  Optionally, it may also",
+      "contain a brief description of exported classes and functions and/or usage",
+      "examples.",
+      "",
+      "  Typical usage example:",
+      "",
+      "  foo = ClassFoo()",
+      "  bar = foo.FunctionBar()",
+      "\"\"\""
+    ],
+    "description": "module doc string google style"
+  },
+  "funcdocstring": {
+    "prefix": "funcdocstring",
+    "body": [
+      "\"\"\"Fetches rows from a Smalltable.",
+      "",
+      "Retrieves rows pertaining to the given keys from the Table instance",
+      "represented by table_handle.  String keys will be UTF-8 encoded.",
+      "",
+      "Args:",
+      "    table_handle: An open smalltable.Table instance.",
+      "    keys: A sequence of strings representing the key of each table",
+      "      row to fetch.  String keys will be UTF-8 encoded.",
+      "    require_all_keys: If True only rows with values set for all keys will be",
+      "      returned.",
+      "",
+      "Returns:",
+      "    A dict mapping keys to the corresponding table row data",
+      "    fetched. Each row is represented as a tuple of strings. For",
+      "    example:",
+      "",
+      "    {b'Serak': ('Rigel VII', 'Preparer'),",
+      "    b'Zim': ('Irk', 'Invader'),",
+      "    b'Lrrr': ('Omicron Persei 8', 'Emperor')}",
+      "",
+      "    Returned keys are always bytes.  If a key from the keys argument is",
+      "    missing from the dictionary, then that row was not found in the",
+      "    table (and require_all_keys must have been False).",
+      "",
+      "Raises:",
+      "    IOError: An error occurred accessing the smalltable.",
+      "\"\"\""
+    ],
+    "description": "function docstring google style"
+  },
+  "classdocstring": {
+    "prefix": "classdocstring",
+    "body": [
+      "\"\"\"Summary of class here.",
+      "",
+      "Longer class information....",
+      "Longer class information....",
+      "",
+      "Attributes:",
+      "    likes_spam: A boolean indicating if we like SPAM or not.",
+      "    eggs: An integer count of the eggs we have laid.",
+      "\"\"\""
+    ],
+    "description": "class docstring google style"
   }
 }
