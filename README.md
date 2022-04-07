@@ -1,4 +1,5 @@
 # gitgit
+
 ## git 자주쓰는 명령어 모음
 
 ### git fetch
@@ -15,6 +16,12 @@
 
 `git branch --delete` : local branch 삭제
 
+### git checkout
+
+`git checkout -q [파일경로]` : commit 되지 않은 변경사항을 버림
+
+`git checkout -q --track [원격 branch 이름]` : branch 를 새로 생성하고 원격 branch 를 추적함
+
 ### git stash
 
 `git stash` : commit 되지 않은 변경사항을 stash 에 저장함
@@ -26,7 +33,6 @@
 `git stash drop` : 가장 최근 stash 삭제
 
 `git stash drop` [stash 이름] : stash 삭제
-
 
 ### git remote
 
@@ -40,12 +46,9 @@
 
 `git clean -n` : git clone 명령으로 삭제될 파일을 보여줌
 
-
 ### git revert
 
-
 `git revert [commit]` : 대상 commit 상태로 코드를 되돌리고 새로운 commit 을 생성함
-
 
 ### git reset
 
@@ -55,11 +58,9 @@
 
 `git reset --hard [commit]` : 대상 commit 상태로 코드를 되돌리고 commit 을 삭제함 (코드 변경사항이 삭제됨)
 
-
 ### git config
 
 `git config --global commit.template ~/.gittemplate` : git template 지정
-
 
 ## commit type
 
