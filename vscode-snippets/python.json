@@ -147,5 +147,16 @@
       "\"\"\""
     ],
     "description": "class docstring google style"
+  },
+  "main": {
+    "prefix": "snipp_main",
+    "body":[
+      "def main() -> None:",
+      "    pass",
+      "",
+      "if __name__ == \"__main__\":",
+      "    main()"
+    ],
+    "description": "main function"
   }
 }
