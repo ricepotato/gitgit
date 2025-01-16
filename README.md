@@ -16,6 +16,8 @@
 
 `git branch --delete` : local branch 삭제
 
+`git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d` : 모든 local branch 삭제(merge 하지 않은 branch 강제 삭제 안함)
+
 ### git checkout
 
 `git checkout -q [파일경로]` : commit 되지 않은 변경사항을 버림
